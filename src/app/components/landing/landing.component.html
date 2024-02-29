@@ -1,0 +1,122 @@
+<div class="main-container flex column gap-1em">
+    <nav class="flex center-center">
+        <div class="inner-nav flex space-between">
+            <img class="mean-words" src="../../../assets/images/mean-words.png" alt="">
+            <div class="flex a-center gap-16em">
+                <p class="margin-0 pointer p">HOME</p>
+                <p class="margin-0 pointer p">SKILLS</p>
+                <p class="margin-0 pointer p">PROJECTS</p>
+                <p class="margin-0 pointer p">BLOGS</p>
+                <p class="margin-0 pointer p">CONTACTS</p>
+            </div>
+        </div>
+    </nav>
+    <div class="flex  column">
+        <div class="relative space-between flex">
+            <div class="profile flex gap-2em">
+                <div class="flex column a-center gap-05em">
+                    <img class="profileImg" src="../../../assets/images/male-profile.png" alt="">
+                    <div class="follow-Icons flex a-center">
+                        <img class="linkedIn pointer" src="../../../assets/images/LInkedin-new-redesign.png"
+                            alt="Git account icon">
+                        <img class="git pointer" src="../../../assets/icons/git.svg" alt="Git account icon">
+                        <img class="x pointer" src="../../../assets/images/x.svg" alt="Git account icon">
+                    </div>
+                </div>
+                <div class="content full-height flex column gap-05em">
+                    <h2 class="margin-0">Hello, I'm <span class="name">Thapelo Mokotelakoena</span></h2>
+                    <img class="mean-stack" src="../../../assets/images/mean-stack.png" alt="">
+                    <p class="profileDesc margin-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum iure
+                        ratione aperiam nihil vero <br><br> architecto nulla soluta eaque, consectetur nobis sapiente
+                        Odit voluptate eligendi, accusamus dolores culpa dolorum eius omnis iure repellendus at
+                        repudiandae saepe. <br><br> Reiciendis voluptates magni quo fuga, quasi eligendi! Ipsa expedita
+                        repudiandae veritatis porro aliquid error amet nobis.</p>
+                </div>
+            </div>
+            <div class="sphere flex a-center">
+                <app-sphere></app-sphere>
+            </div>
+        </div>
+        <div class="box-container flex a-center">
+            <div class="flex full-width space-around">
+                <div class="flex full-height">
+                    <h2 class="margin-0 contactP pointer">Let's discuss <br> on something <span class="span">cool</span>
+                        together</h2>
+                </div>
+                <img src="../../../assets/images/re-line.png" alt="">
+                <form class="flex column gap-05em">
+                    <input type="text" name="" placeholder="Your name">
+                    <input type="text" name="" placeholder="Your email">
+                    <input type="text" name="" placeholder="Subject">
+                    <textarea name="" placeholder="Your message" id="" cols="30" rows="5"></textarea>
+                    <div class="btn pointer flex center-center">
+                        <mat-icon>send</mat-icon>
+                        <p class="margin-0">Send Message</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="skills-container relative flex j-center">
+        <div class="inner-skills flex column gap-3em">
+            <div class="flex j-center">
+                <div class="heading">
+                    <p class="margin-0">Technical Skills</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="box relative">
+                    <app-box></app-box>
+                    <mat-slide-toggle class="absolute">Try Feature!</mat-slide-toggle>
+                </div>
+                <div class="technical-items flex column gap-2em">
+                    <div class="flex row-gap">
+                        <p class="margin-0 title">Programming Languages</p>
+                        <div class="skills flex gap-1em">
+                            <p class="margin-0">Javascript</p>
+                            <p class="margin-0">Typescript</p>
+                        </div>
+                    </div>
+                    <div class="flex row-gap">
+                        <p class="margin-0 title">Web Front End</p>
+                        <div class="skills flex gap-1em">
+                            <p class="margin-0">Angular</p>
+                            <p class="margin-0">HTML5</p>
+                            <p class="margin-0">CSS3</p>
+                        </div>
+                    </div>
+                    <div class="flex row-gap">
+                        <p class="margin-0 title">Web Back End</p>
+                        <div class="skills flex gap-1em">
+                            <p class="margin-0">Node.js</p>
+                            <p class="margin-0">Express.js</p>
+                        </div>
+                    </div>
+                    <div class="flex row-gap">
+                        <p class="margin-0 title">Databases</p>
+                        <div class="skills flex gap-1em">
+                            <p class="margin-0">Mongo.db</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="absolute skills-divider" src="../../../assets/images/using-divider.png" alt="">
+    </div>
+    <div class="projects-container flex j-center">
+        <div class="inner-projects flex column gap-1em">
+            <div class="flex j-center">
+                <div class="heading">
+                    <p class="margin-0">Projects</p>
+                </div>
+            </div>
+            <div>
+                <mat-tab-group>
+                    <mat-tab label="All"> Content 1 </mat-tab>
+                    <mat-tab label="Web"> Content 2 </mat-tab>
+                    <mat-tab label="Mobile"> Content 3 </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

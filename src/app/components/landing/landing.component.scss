@@ -1,0 +1,222 @@
+$project-black: black;
+$project-red: red;
+$primary-blue: #331c52;
+$primary-bg: #323332;
+
+.main-container {
+    background-color: ghostwhite;
+    overflow-x: hidden;
+
+    nav {
+        height: 50px;
+        background-color: $project-black;
+        color: white;
+
+        .inner-nav {
+            width: 67%;
+            margin-left: 7em;
+
+            .p {
+                font-size: 15px;
+            }
+
+            .mean-words {
+                height: 32px;
+            }
+        }
+
+        .gap-16em {
+            gap: 1.6em;
+        }
+
+        .boxText {
+            background-color: red;
+        }
+    }
+
+    .sphere {
+        margin-left: 11em;
+        margin-top: -2em;
+    }
+
+    .gap-3em {
+        gap: 3em;
+    }
+
+    .box-container {
+        // margin-left: -9.5em;
+        margin-top: -1em;
+        gap: 8em;
+
+        img {
+            margin-top: -30px;
+        }
+
+        .contactP {
+            font-size: 32px;
+            color: $primary-blue;
+            margin-top: 4em;
+        }
+
+        form {
+            margin-top: -1em;
+            margin-left: 1em;
+
+            input,
+            textarea {
+                padding: 6px;
+                padding-left: 10px;
+                border-radius: 5px;
+                border: 1px solid #c8bdd6;
+                font-weight: 500;
+                font-size: 12px;
+
+                &:focus {
+                    padding: 1px solid;
+                }
+            }
+
+            .btn {
+                background-color: $primary-blue;
+                color: white;
+                height: 25px;
+                border-radius: 5px;
+                gap: .2em;
+
+                mat-icon {
+                    rotate: -45deg;
+                    margin-top: -6px;
+                }
+            }
+        }
+
+
+    }
+
+    .mean-stack {
+        width: 301px;
+    }
+
+    .skills-container {
+
+        .inner-skills {
+            width: 70%;
+
+            .title {
+                font-weight: 500;
+                text-align: end;
+                width: 200px;
+            }
+
+            .skills {
+                p {
+                    padding: 2px 8px;
+                    color: white;
+                    background-color: $primary-bg;
+                    border-radius: 27px;
+                }
+            }
+
+            .row-gap {
+                gap: 5em;
+            }
+
+            .box {
+                margin-left: -20em;
+            }
+
+            .technical-items {
+                margin-left: -5em;
+            }
+        }
+
+        .skills-divider {
+            left: 43%;
+            bottom: -59%;
+            height: 230px;
+        }
+    }
+
+    .projects-container {
+
+        .inner-projects {
+            width: 70%;
+        }
+    }
+}
+
+.heading {
+    padding: 8px 36px;
+    color: white;
+    background-color: $primary-bg;
+    border-radius: 27px;
+
+    p {
+        font-weight: 500;
+    }
+}
+
+.content {
+    width: 470px;
+}
+
+.span {
+    color: #aa0d79;
+}
+
+mat-slide-toggle {
+    bottom: -148px;
+    left: 90px;
+}
+
+.name {
+    font-size: 30px;
+}
+
+.projects-summary {
+    width: 200px;
+
+    p {
+        font-size: large;
+    }
+}
+
+.dimensions-container {
+    width: 500px;
+}
+
+.color-red {
+    color: $project-red;
+}
+
+.profile {
+    margin-left: 2em;
+    margin-top: 2em;
+
+    // .profileDesc {
+    //     // width: 500px;
+    // }
+
+    .profileImg {
+        height: 183px;
+        border: 3px solid black;
+        border-radius: 50%;
+        padding: 2px;
+    }
+
+    .follow-Icons {
+        gap: .7em;
+    }
+
+    .git {
+        height: 33px;
+    }
+
+    .linkedIn {
+        height: 31px;
+    }
+
+    .x {
+        height: 28px;
+    }
+}

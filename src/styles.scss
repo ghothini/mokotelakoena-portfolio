@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// flex
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.center-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.a-end {
+    align-items: end;
+}
+
+.a-start {
+    align-items: start;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.j-start {
+    justify-content: start;
+}
+
+.absolute {
+    position: absolute;
+}
+
+relative {
+    position: relative;
+}
+
+// spaces
+
+.margin-0 {
+    margin: 0;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.gap-2em {
+    gap: 2em;
+}
+
+.gap-05em {
+    gap: .5em;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+
+.half-height {
+    height: 50%;
+}
+
+// text
+
+.text-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
