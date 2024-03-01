@@ -1,0 +1,103 @@
+$primary-bg: #939393c9;
+
+.all-container {
+    padding: 3px;
+
+    // overflow-x: hidden;
+    .project {
+        // width: 470px;
+        height: 270px;
+        background-image: url("../../../assets/images/default-bg-img.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .title {
+            top: 26px;
+            width: 99%;
+
+            p {
+                font-size: large;
+            }
+        }
+
+        .framework {
+            left: 14px;
+            top: 24px;
+            height: 41px;
+        }
+
+        .nodejs {
+            height: 48px;
+            top: 212px;
+            left: 78px;
+        }
+
+        .mongodb {
+            height: 39px;
+            left: 15px;
+            top: 214px;
+        }
+    }
+
+    .desc {
+        gap: .7em;
+        padding: 5px;
+
+        .descP {
+            font-weight: 500;
+        }
+
+        .stack-desc {
+            margin-top: .5em;
+        }
+
+        .stacks-container {
+            gap: 3px;
+
+            .stack {
+                height: 27px;
+                width: 75px;
+                background-color: $primary-bg;
+            }
+        }
+
+        .hr {
+            margin-top: 10px;
+        }
+
+        .actions-container {
+            margin-right: -1px;
+        }
+
+        .action {
+            height: 32px;
+            width: 90px;
+            gap: 4px;
+            color: white;
+
+            img {
+                height: 18px;
+            }
+        }
+
+        .action:nth-child(1) {
+            background-color: #ec7575;
+        }
+
+        .action:nth-child(2) {
+            background-color: #020000;
+        }
+
+        .action:nth-child(3) {
+            background-color: #4d8bf2;
+        }
+
+        .close {
+            gap: 2px;
+        }
+
+        .git {
+            gap: 6px !important;
+        }
+    }
+}

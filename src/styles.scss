@@ -93,6 +93,10 @@ relative {
     width: 50%;
 }
 
+.width-99 {
+    width: 99%;
+}
+
 
 .half-height {
     height: 50%;
@@ -106,4 +110,14 @@ relative {
 
 .pointer {
     cursor: pointer;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+// Material
+
+.cdk-overlay-pane {
+    width: 369px !important;
 }

@@ -80,7 +80,7 @@
                     <div class="flex row-gap">
                         <p class="margin-0 title">Web Front End</p>
                         <div class="skills flex gap-1em">
-                            <p class="margin-0">Angular</p>
+                            <p class="margin-0">AngularJS</p>
                             <p class="margin-0">HTML5</p>
                             <p class="margin-0">CSS3</p>
                         </div>
@@ -112,9 +112,31 @@
             </div>
             <div>
                 <mat-tab-group>
-                    <mat-tab label="All"> Content 1 </mat-tab>
-                    <mat-tab label="Web"> Content 2 </mat-tab>
-                    <mat-tab label="Mobile"> Content 3 </mat-tab>
+                    <mat-tab label="All">
+                        <div class="all-container flex gap-05em">
+                            <div id="project" (click)="showProject()" class="project pointer relative">
+                                <div class="title absolute">
+                                    <p class="margin-0 text-center">My Portfolio</p>
+                                </div>
+                                <img src="../../../assets/images/ng.png" alt="" class="framework absolute">
+                                <img src="../../../assets/images/nodejs.png" alt="" class="nodejs absolute">
+                                <img src="../../../assets/images/mongodb.png" alt="" class="mongodb absolute">
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Web">
+                        <div class="all-container flex gap-05em">
+                            <div id="project" (click)="showProject()" class="project pointer relative">
+                                <div class="title absolute">
+                                    <p class="margin-0 text-center">My Portfolio</p>
+                                </div>
+                                <img src="../../../assets/images/ng.png" alt="" class="framework absolute">
+                                <img src="../../../assets/images/nodejs.png" alt="" class="nodejs absolute">
+                                <img src="../../../assets/images/mongodb.png" alt="" class="mongodb absolute">
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Mobile"> COMING SOON </mat-tab>
                 </mat-tab-group>
             </div>
         </div>

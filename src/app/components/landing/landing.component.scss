@@ -141,6 +141,46 @@ $primary-bg: #323332;
 
         .inner-projects {
             width: 70%;
+
+            .all-container {
+                margin-top: 1em;
+                margin-bottom: 1em;
+
+                .project {
+                    width: 270px;
+                    height: 200px;
+                    background-image: url("../../../assets/images/default-bg-img.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    .title {
+                        top: 26px;
+                        width: 269px;
+
+                        p {
+                            font-size: large;
+                        }
+                    }
+
+                    .framework {
+                        height: 41px;
+                        left: 14px;
+                        top: 24px;
+                    }
+
+                    .nodejs {
+                        height: 48px;
+                        bottom: 27px;
+                        left: 78px;
+                    }
+
+                    .mongodb {
+                        height: 39px;
+                        bottom: 35px;
+                        left: 15px;
+                    }
+                }
+            }
         }
     }
 }
