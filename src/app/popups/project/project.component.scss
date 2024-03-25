@@ -1,7 +1,7 @@
 $primary-bg: #939393c9;
 
 .all-container {
-    padding: 3px;
+    // padding: 3px;
 
     // overflow-x: hidden;
     .project {
@@ -9,6 +9,7 @@ $primary-bg: #939393c9;
         height: 270px;
         background-image: url("../../../assets/images/default-bg-img.png");
         background-size: cover;
+        padding-left: -2em;
         background-repeat: no-repeat;
 
         .title {
@@ -41,7 +42,7 @@ $primary-bg: #939393c9;
 
     .desc {
         gap: .7em;
-        padding: 5px;
+        padding: 5px 5px 5px 13px;
 
         .descP {
             font-weight: 500;
@@ -100,4 +101,18 @@ $primary-bg: #939393c9;
             gap: 6px !important;
         }
     }
+}
+
+.neutinos {
+    height: 270px;
+    background-image: url("../../../assets/images/neutrinos.webp") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.portfolio {
+    height: 270px;
+    background-image: url("../../../assets/images/dahboard.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

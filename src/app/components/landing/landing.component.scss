@@ -23,6 +23,11 @@ $primary-bg: #323332;
             .mean-words {
                 height: 32px;
             }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
         }
 
         .gap-16em {
@@ -60,7 +65,12 @@ $primary-bg: #323332;
 
         form {
             margin-top: -1em;
-            margin-left: 1em;
+            margin-left: 3em;
+
+            .input-container {
+                // height: 55px;
+                position: relative;
+            }
 
             input,
             textarea {
@@ -73,15 +83,28 @@ $primary-bg: #323332;
 
                 &:focus {
                     padding: 1px solid;
+                    outline: none;
                 }
             }
 
+            input {
+                height: 23px;
+            }
+
+
             .btn {
+                height: 32px;
                 background-color: $primary-blue;
                 color: white;
-                height: 25px;
-                border-radius: 5px;
+                width: 85%;
+                border-radius: 13px;
+                padding: 2px;
                 gap: .2em;
+
+                &:hover {
+                    color: $primary-blue;
+                    background-color: #cdcdcd;
+                }
 
                 mat-icon {
                     rotate: -45deg;
@@ -90,7 +113,29 @@ $primary-bg: #323332;
             }
         }
 
+        .interestedSubject {
+            padding: 4px;
+            background-color: #cdcdcd;
+            border-radius: 6px;
+        }
 
+        .subj-container {
+            margin-top: 7em;
+
+            .p {
+                font-size: 20px;
+                font-weight: 100;
+            }
+
+            .inner-subj-container {
+                width: 270px;
+            }
+        }
+    }
+
+    .selected-subj {
+        background-color: $primary-blue !important;
+        color: white;
     }
 
     .mean-stack {
@@ -108,31 +153,28 @@ $primary-bg: #323332;
                 width: 200px;
             }
 
-            .skills {
-                p {
-                    padding: 2px 8px;
-                    color: white;
-                    background-color: $primary-bg;
-                    border-radius: 27px;
-                }
-            }
-
             .row-gap {
                 gap: 5em;
-            }
-
-            .box {
-                margin-left: -20em;
             }
 
             .technical-items {
                 margin-left: -5em;
             }
+
+            .feature-container {
+                position: relative;
+                .feature {
+                    position: absolute;
+                    top: -19px;
+                    left: calc(50% - 67px);                
+                }
+            }
+
         }
 
         .skills-divider {
             left: 43%;
-            bottom: -59%;
+            bottom: -55.5%;
             height: 230px;
         }
     }
@@ -147,14 +189,15 @@ $primary-bg: #323332;
                 margin-bottom: 1em;
 
                 .project {
+                    position: relative;
                     width: 270px;
                     height: 200px;
-                    background-image: url("../../../assets/images/default-bg-img.png");
-                    background-size: cover;
+                    background-image: url("../../../assets/images/neutrinos-project-landing.png");
+                    background-size: 121%;
                     background-repeat: no-repeat;
 
                     .title {
-                        top: 26px;
+                        top: 13px;
                         width: 269px;
 
                         p {
@@ -163,25 +206,96 @@ $primary-bg: #323332;
                     }
 
                     .framework {
-                        height: 41px;
-                        left: 14px;
-                        top: 24px;
+                        height: 36px;
+                        left: 6px;
+                        top: 8px;
                     }
 
                     .nodejs {
-                        height: 48px;
-                        bottom: 27px;
-                        left: 78px;
+                        height: 42px;
+                        bottom: 9px;
+                        left: 58px;
                     }
 
                     .mongodb {
-                        height: 39px;
-                        bottom: 35px;
-                        left: 15px;
+                        height: 37px;
+                        bottom: 10px;
+                        left: 9px;
                     }
+                }
+
+                .soon {
+                    width: 270px;
+                    height: 200px;
                 }
             }
         }
+    }
+}
+
+.portfolio {
+    background-image: url("../../../assets/images/default-bg-img.png") !important;
+    background-size: cover !important;
+}
+
+.portfolio-img {
+    background-image: url("../../../assets/images/dahboard.png") !important;
+    background-size: cover !important;
+}
+
+.timeline-area {
+    width: 360px;
+    padding: 0px 20px 0px 30px;
+    border-left: 2px solid $primary-blue;
+
+    .timeline {
+        background-color: $primary-blue;
+        padding: 0px 25px;
+        padding-bottom: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        line-height: 1.7;
+        position: relative;
+        color: white;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .timeline::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+        border: 3px solid #ddd;
+        position: absolute;
+        top: 10px;
+        left: -40px;
+    }
+
+    .timeline::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+        border-width: 8px;
+        position: absolute;
+        left: -17px;
+        top: 10px;
+    }
+
+    h2 {
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    p {
+        padding: 0px 6px;
+        color: black;
+        background-color: white;
+        border-radius: 27px;
     }
 }
 
@@ -204,15 +318,6 @@ $primary-bg: #323332;
     color: #aa0d79;
 }
 
-mat-slide-toggle {
-    bottom: -148px;
-    left: 90px;
-}
-
-.name {
-    font-size: 30px;
-}
-
 .projects-summary {
     width: 200px;
 
@@ -229,23 +334,60 @@ mat-slide-toggle {
     color: $project-red;
 }
 
+.error-msg {
+    color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 6px;
+}
+
 .profile {
     margin-left: 2em;
     margin-top: 2em;
 
-    // .profileDesc {
-    //     // width: 500px;
-    // }
+    .name {
+        font-weight: 400;
+
+        span {
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
 
     .profileImg {
         height: 183px;
-        border: 3px solid black;
+        border: 2px solid black;
         border-radius: 50%;
         padding: 2px;
     }
 
     .follow-Icons {
         gap: .7em;
+
+        .container {
+            height: 34px;
+            width: 34px;
+
+            .img {
+                &:hover {
+
+                    &:nth-child(1) {
+                        height: 36px !important;
+                    }
+
+                    &:nth-child(3) {
+                        height: 32px !important;
+                    }
+                }
+            }
+
+            .git-img {
+                &:hover {
+                    height: 39px;
+                }
+            }
+
+        }
     }
 
     .git {
@@ -259,4 +401,25 @@ mat-slide-toggle {
     .x {
         height: 28px;
     }
+}
+
+.contacts {
+    margin-bottom: 1em;
+
+    .follow-Icons {
+        gap: 1em;
+    }
+
+    .git {
+        height: 29px;
+    }
+
+    .linkedIn {
+        height: 27px;
+    }
+
+    .x {
+        height: 24px;
+    }
+
 }

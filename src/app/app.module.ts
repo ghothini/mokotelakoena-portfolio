@@ -9,6 +9,7 @@ import { MaterialModule } from './modules/material/material.module';
 import { SphereComponent } from './components/three-dimensions/sphere/sphere.component';
 import { BoxComponent } from './components/three-dimensions/box/box.component';
 import { ProjectComponent } from './popups/project/project.component';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectComponent } from './popups/project/project.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

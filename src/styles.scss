@@ -39,6 +39,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     flex: 1;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .a-end {
     align-items: end;
 }
@@ -69,6 +73,10 @@ relative {
     margin: 0;
 }
 
+.m-t-35px {
+    margin-top: 35px;
+}
+
 .gap-1em {
     gap: 1em;
 }
@@ -97,12 +105,19 @@ relative {
     width: 99%;
 }
 
-
 .half-height {
     height: 50%;
 }
 
+.padding-10px {
+    padding: 10px;
+}
+
 // text
+
+.z-index {
+    z-index: 1;
+}
 
 .text-center {
     text-align: center;
@@ -114,6 +129,12 @@ relative {
 
 .border-box {
     box-sizing: border-box;
+}
+
+// colors
+
+.color-white {
+    color: white;
 }
 
 // Material

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -8,6 +8,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
   styleUrls: ['./box.component.scss']
 })
 export class BoxComponent {
+  @Input() tryFeature: any;
   renderer: any;
   scene: any = new THREE.Scene();
   camera: any = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -79,7 +80,9 @@ export class BoxComponent {
 
   animate(time: any) {
     if (this.box) {
-      // this.box.rotation.x = time / 1000;
+      if(this.tryFeature) {
+        this.box.rotation.x = time / 1000;
+      }
       this.box.rotation.y = time / 1000;
       this.renderer.render(this.scene, this.camera);
     }

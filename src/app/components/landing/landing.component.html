@@ -4,33 +4,42 @@
             <img class="mean-words" src="../../../assets/images/mean-words.png" alt="">
             <div class="flex a-center gap-16em">
                 <p class="margin-0 pointer p">HOME</p>
-                <p class="margin-0 pointer p">SKILLS</p>
-                <p class="margin-0 pointer p">PROJECTS</p>
+                <p class="margin-0 pointer p"><a href="#skills">SKILLS</a></p>
+                <p class="margin-0 pointer p"><a href="#projects">PROJECTS</a></p>
                 <p class="margin-0 pointer p">BLOGS</p>
-                <p class="margin-0 pointer p">CONTACTS</p>
+                <p class="margin-0 pointer p"><a href="#projects">CONTACTS</a></p>
             </div>
         </div>
     </nav>
-    <div class="flex  column">
+    <div class="flex column">
         <div class="relative space-between flex">
             <div class="profile flex gap-2em">
                 <div class="flex column a-center gap-05em">
                     <img class="profileImg" src="../../../assets/images/male-profile.png" alt="">
                     <div class="follow-Icons flex a-center">
-                        <img class="linkedIn pointer" src="../../../assets/images/LInkedin-new-redesign.png"
-                            alt="Git account icon">
-                        <img class="git pointer" src="../../../assets/icons/git.svg" alt="Git account icon">
-                        <img class="x pointer" src="../../../assets/images/x.svg" alt="Git account icon">
+                        <div class="container flex center-center">
+                            <img (click)="goTo('https://www.linkedin.com/in/thapelo-mokotelakoena-67379b273/?originalSubdomain=za')"
+                                class="linkedIn img pointer" src="../../../assets/images/LInkedin-new-redesign.png"
+                                alt="Git account icon">
+                        </div>
+                        <div class="container flex center-center">
+                            <img (click)="goTo('https://github.com/ghothini')" class="git git-img pointer"
+                                src="../../../assets/icons/git.svg" alt="Git account icon">
+                        </div>
+                        <div class="container flex center-center">
+                            <img (click)="goTo('https://twitter.com/')" class="x img pointer"
+                                src="../../../assets/images/x.svg" alt="Git account icon">
+                        </div>
                     </div>
                 </div>
                 <div class="content full-height flex column gap-05em">
-                    <h2 class="margin-0">Hello, I'm <span class="name">Thapelo Mokotelakoena</span></h2>
+                    <h2 class="margin-0 name">Hello, I'm <span>Thapelo Mokotelakoena</span></h2>
                     <img class="mean-stack" src="../../../assets/images/mean-stack.png" alt="">
-                    <p class="profileDesc margin-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum iure
-                        ratione aperiam nihil vero <br><br> architecto nulla soluta eaque, consectetur nobis sapiente
-                        Odit voluptate eligendi, accusamus dolores culpa dolorum eius omnis iure repellendus at
-                        repudiandae saepe. <br><br> Reiciendis voluptates magni quo fuga, quasi eligendi! Ipsa expedita
-                        repudiandae veritatis porro aliquid error amet nobis.</p>
+                    <p class="profileDesc margin-0">I am a Javascript evangelist who loves to build web solutions in
+                        Angular, Node.js and Express.js<br><br> A great team player who fits well in agile
+                        teams and I continually learn new ways
+                        and approaches to deliver software of top quality. I Thapelo will help your business get to the
+                        next level!</p>
                 </div>
             </div>
             <div class="sphere flex a-center">
@@ -38,72 +47,113 @@
             </div>
         </div>
         <div class="box-container flex a-center">
-            <div class="flex full-width space-around">
+            <div class="flex full-width space-around m-t-35px">
                 <div class="flex full-height">
                     <h2 class="margin-0 contactP pointer">Let's discuss <br> on something <span class="span">cool</span>
                         together</h2>
                 </div>
-                <img src="../../../assets/images/re-line.png" alt="">
-                <form class="flex column gap-05em">
-                    <input type="text" name="" placeholder="Your name">
-                    <input type="text" name="" placeholder="Your email">
-                    <input type="text" name="" placeholder="Subject">
-                    <textarea name="" placeholder="Your message" id="" cols="30" rows="5"></textarea>
-                    <div class="btn pointer flex center-center">
-                        <mat-icon>send</mat-icon>
-                        <p class="margin-0">Send Message</p>
+                <form class="flex gap-1em">
+                    <div class="flex">
+                        <div class="flex column subj-container gap-1em">
+                            <p class="margin-0 p">Im interested in ...</p>
+                            <div class="flex column gap-05em">
+                                <div class="inner-subj-container flex gap-05em wrap">
+                                    <p (click)="selectingSubj(i,subj)"
+                                        *ngFor="let subj of interestedSubject; index as i"
+                                        [class.selected-subj]="i === selectedSubj"
+                                        class="margin-0 interestedSubject pointer">{{subj | titlecase}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="../../../assets/images/re-line.png" alt="">
                     </div>
+                    <form [formGroup]="projectFormGroup" class="flex gap-05em column">
+                        <div class="input-container flex column">
+                            <input type="text" formControlName="customerName" name="" placeholder="Your name">
+                            <div class="error-msg"
+                                *ngIf="projectFormGroup.get('customerName')?.hasError('required') && projectFormGroup.get('customerName')?.touched">
+                                <small>Name is <strong>required</strong></small>
+                            </div>
+                        </div>
+                        <div class="input-container flex column">
+                            <input type="text" formControlName="email" name="" placeholder="Your email">
+                            <div class="error-msg"
+                                *ngIf="projectFormGroup.get('email')?.hasError('required') && projectFormGroup.get('email')?.touched">
+                                <small>Email is <strong>required</strong></small>
+                            </div>
+                        </div>
+                        <div class="input-container flex column">
+                            <input type="text" formControlName="subject" name="" placeholder="Subject">
+                            <div class="error-msg"
+                                *ngIf="projectFormGroup.get('subject')?.hasError('required') && projectFormGroup.get('subject')?.touched">
+                                <small>Subject is <strong>required</strong></small>
+                            </div>
+                        </div>
+                        <div class="input-container flex column">
+                            <textarea name="" formControlName="message" placeholder="Your message" id="" cols="30"
+                                rows="5"></textarea>
+                            <div class="error-msg"
+                                *ngIf="projectFormGroup.get('message')?.hasError('required') && projectFormGroup.get('message')?.touched">
+                                <small>Message is <strong>required</strong></small>
+                            </div>
+                        </div>
+                        <div (click)="submit()" class="flex center-center">
+                            <div class="btn pointer flex center-center">
+                                <mat-icon>send</mat-icon>
+                                <p class="margin-0">Send Message</p>
+                            </div>
+                        </div>
+                    </form>
                 </form>
             </div>
         </div>
     </div>
-    <div class="skills-container relative flex j-center">
+    <div id="skills" class="skills-container relative flex j-center">
         <div class="inner-skills flex column gap-3em">
             <div class="flex j-center">
                 <div class="heading">
                     <p class="margin-0">Technical Skills</p>
                 </div>
             </div>
-            <div class="flex">
-                <div class="box relative">
-                    <app-box></app-box>
-                    <mat-slide-toggle class="absolute">Try Feature!</mat-slide-toggle>
+            <div class="flex center-center">
+                <div class="flex center-center feature-container">
+                    <app-box [tryFeature]="_tryFeature"></app-box>
+                    <mat-slide-toggle (click)="tryFeature()" class="feature">Try Feature!</mat-slide-toggle>
                 </div>
-                <div class="technical-items flex column gap-2em">
-                    <div class="flex row-gap">
-                        <p class="margin-0 title">Programming Languages</p>
-                        <div class="skills flex gap-1em">
+                <section class="timeline-area flex column gap-1em">
+                    <div class="timeline flex column gap-05em">
+                        <h2 class="margin-0">Programming Languages</h2>
+                        <div class="flex gap-05em">
                             <p class="margin-0">Javascript</p>
                             <p class="margin-0">Typescript</p>
                         </div>
                     </div>
-                    <div class="flex row-gap">
-                        <p class="margin-0 title">Web Front End</p>
-                        <div class="skills flex gap-1em">
+                    <div class="timeline flex column gap-05em">
+                        <h2 class="margin-0">Web Front End</h2>
+                        <div class="flex gap-05em">
                             <p class="margin-0">AngularJS</p>
                             <p class="margin-0">HTML5</p>
                             <p class="margin-0">CSS3</p>
                         </div>
                     </div>
-                    <div class="flex row-gap">
-                        <p class="margin-0 title">Web Back End</p>
-                        <div class="skills flex gap-1em">
+                    <div class="timeline flex column gap-05em">
+                        <h2 class="margin-0">Web Back End</h2>
+                        <div class="flex gap-05em">
                             <p class="margin-0">Node.js</p>
                             <p class="margin-0">Express.js</p>
                         </div>
                     </div>
-                    <div class="flex row-gap">
-                        <p class="margin-0 title">Databases</p>
-                        <div class="skills flex gap-1em">
+                    <div class="timeline flex column gap-05em">
+                        <h2 class="margin-0">Databases</h2>
+                        <div class="flex gap-05em">
                             <p class="margin-0">Mongo.db</p>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
-        <img class="absolute skills-divider" src="../../../assets/images/using-divider.png" alt="">
     </div>
-    <div class="projects-container flex j-center">
+    <div id="projects" class="projects-container flex j-center">
         <div class="inner-projects flex column gap-1em">
             <div class="flex j-center">
                 <div class="heading">
@@ -114,9 +164,12 @@
                 <mat-tab-group>
                     <mat-tab label="All">
                         <div class="all-container flex gap-05em">
-                            <div id="project" (click)="showProject()" class="project pointer relative">
+                            <div [class.portfolio-img]="project.name === 'My Portfolio'"
+                                *ngFor="let project of projects; let i = index" id="project" (click)="showProject(i)"
+                                class="project pointer">
                                 <div class="title absolute">
-                                    <p class="margin-0 text-center">My Portfolio</p>
+                                    <p class="margin-0 text-center" [class.color-white]="project.color">{{project.name |
+                                        titlecase}}</p>
                                 </div>
                                 <img src="../../../assets/images/ng.png" alt="" class="framework absolute">
                                 <img src="../../../assets/images/nodejs.png" alt="" class="nodejs absolute">
@@ -126,9 +179,12 @@
                     </mat-tab>
                     <mat-tab label="Web">
                         <div class="all-container flex gap-05em">
-                            <div id="project" (click)="showProject()" class="project pointer relative">
+                            <div [class.portfolio]="project.name === 'My Portfolio'"
+                                *ngFor="let project of projects; let i = index" id="project" (click)="showProject(i)"
+                                class="project pointer">
                                 <div class="title absolute">
-                                    <p class="margin-0 text-center">My Portfolio</p>
+                                    <p class="margin-0 text-center" [class.color-white]="project.color">{{project.name |
+                                        titlecase}}</p>
                                 </div>
                                 <img src="../../../assets/images/ng.png" alt="" class="framework absolute">
                                 <img src="../../../assets/images/nodejs.png" alt="" class="nodejs absolute">
@@ -136,8 +192,36 @@
                             </div>
                         </div>
                     </mat-tab>
-                    <mat-tab label="Mobile"> COMING SOON </mat-tab>
+                    <mat-tab label="Mobile">
+                        <div class="all-container flex gap-05em">
+                            <div class="soon flex gap-05em">
+                                COMING SOON
+                            </div>
+                        </div>
+                    </mat-tab>
                 </mat-tab-group>
+            </div>
+        </div>
+    </div>
+    <div class="contacts flex column gap-2em">
+        <div class="flex j-center">
+            <div class="heading">
+                <p class="margin-0">Contacts</p>
+            </div>
+        </div>
+        <div class="flex j-center">
+            <div class="follow-Icons flex a-center">
+                <div
+                    (click)="goTo('https://www.linkedin.com/in/thapelo-mokotelakoena-67379b273/?originalSubdomain=za')">
+                    <img class="linkedIn pointer" src="../../../assets/images/LInkedin-new-redesign.png"
+                        alt="Git account icon">
+                </div>
+                <div (click)="goTo('https://github.com/ghothini/my-portfolio')">
+                    <img class="git pointer" src="../../../assets/icons/git.svg" alt="Git account icon">
+                </div>
+                <div (click)="goTo('https://twitter.com/')">
+                    <img class="x pointer" src="../../../assets/images/x.svg" alt="Git account icon">
+                </div>
             </div>
         </div>
     </div>
