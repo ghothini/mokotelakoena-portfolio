@@ -60,7 +60,7 @@ $primary-bg: #323332;
         .contactP {
             font-size: 32px;
             color: $primary-blue;
-            margin-top: 4em;
+            margin-top: 0em;
         }
 
         form {
@@ -80,6 +80,7 @@ $primary-bg: #323332;
                 border: 1px solid #c8bdd6;
                 font-weight: 500;
                 font-size: 12px;
+                font-family: "Poppins", sans-serif;
 
                 &:focus {
                     padding: 1px solid;
@@ -93,10 +94,10 @@ $primary-bg: #323332;
 
 
             .btn {
-                height: 32px;
+                height: 26px;
                 background-color: $primary-blue;
                 color: white;
-                width: 85%;
+                width: 74%;
                 border-radius: 13px;
                 padding: 2px;
                 gap: .2em;
@@ -120,11 +121,12 @@ $primary-bg: #323332;
         }
 
         .subj-container {
-            margin-top: 7em;
+            margin-top: 1.5em;
 
             .p {
                 font-size: 20px;
-                font-weight: 100;
+                font-weight: 200;
+                height: 30px;
             }
 
             .inner-subj-container {
@@ -163,10 +165,11 @@ $primary-bg: #323332;
 
             .feature-container {
                 position: relative;
+
                 .feature {
                     position: absolute;
                     top: -19px;
-                    left: calc(50% - 67px);                
+                    left: calc(50% - 67px);
                 }
             }
 
@@ -201,7 +204,7 @@ $primary-bg: #323332;
                         width: 269px;
 
                         p {
-                            font-size: large;
+                            font-size: 16px;
                         }
                     }
 
@@ -233,6 +236,11 @@ $primary-bg: #323332;
     }
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .portfolio {
     background-image: url("../../../assets/images/default-bg-img.png") !important;
     background-size: cover !important;
@@ -246,7 +254,7 @@ $primary-bg: #323332;
 .timeline-area {
     width: 360px;
     padding: 0px 20px 0px 30px;
-    border-left: 2px solid $primary-blue;
+    // border-left: 2px solid $primary-blue;
 
     .timeline {
         background-color: $primary-blue;
@@ -267,8 +275,8 @@ $primary-bg: #323332;
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: black;
-        border: 3px solid #ddd;
+        // background-color: black;
+        // border: 3px solid #ddd;
         position: absolute;
         top: 10px;
         left: -40px;
@@ -279,7 +287,7 @@ $primary-bg: #323332;
         width: 0;
         height: 0;
         border-style: solid;
-        border-color: transparent black transparent transparent;
+        border-color: transparent $primary-blue transparent transparent;
         border-width: 8px;
         position: absolute;
         left: -17px;
@@ -339,6 +347,10 @@ $primary-bg: #323332;
     position: absolute;
     bottom: 0px;
     left: 6px;
+
+    small {
+        font-size: 12px;
+    }
 }
 
 .profile {
@@ -347,6 +359,7 @@ $primary-bg: #323332;
 
     .name {
         font-weight: 400;
+        width: 476px;
 
         span {
             font-size: 30px;
@@ -367,26 +380,6 @@ $primary-bg: #323332;
         .container {
             height: 34px;
             width: 34px;
-
-            .img {
-                &:hover {
-
-                    &:nth-child(1) {
-                        height: 36px !important;
-                    }
-
-                    &:nth-child(3) {
-                        height: 32px !important;
-                    }
-                }
-            }
-
-            .git-img {
-                &:hover {
-                    height: 39px;
-                }
-            }
-
         }
     }
 
@@ -421,5 +414,135 @@ $primary-bg: #323332;
     .x {
         height: 24px;
     }
-
 }
+
+@media screen and (max-width: 1115px) {
+
+    .sphere,
+    .profile {
+        margin-left: 0em !important;
+        margin-top: 0em !important;
+    }
+
+    .profile {
+        gap: 1em;
+        padding-left: 1em;
+    }
+
+    .box-container {
+        img {
+            display: none;
+        }
+    }
+
+    .main-container nav .inner-nav {
+        margin-left: 0em !important;
+    }
+
+    // form {
+    //     gap: 0em;
+    // }
+}
+
+@media screen and (max-width: 1115px) {
+    .profile-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile {
+        gap: 1em;
+        padding-left: 0em;
+    }
+
+    .inner-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-box-container {
+        flex-direction: column;
+        align-items: center;
+        gap: .5em;
+        margin-top: 0em;
+    }
+
+    .contactP {
+        margin-top: .5em !important;
+    }
+
+    form {
+        margin-top: 0em !important;
+        margin-left: 0em !important;
+    }
+
+    .skills-3d {
+        flex-direction: column;
+    }
+
+    .su {
+        margin-top: 0em;
+    }
+}
+
+@media screen and (max-width: 803px) {
+    .gap-16em {
+        gap: 1em !important;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 320px;
+    }
+
+    .profile .name {
+        width: fit-content;
+    }
+
+
+        .contactP {
+            text-align: center;
+        }
+
+        .main-form {
+            flex-direction: column;
+            gap: 1.5em;
+        }
+
+        .subj-container {
+            margin-top: 0em !important;
+        }
+
+        .show-firstname {
+            display: none;
+        }
+
+        .timeline-area {
+            width: 281px
+        }
+
+        .all-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .inner-projects {
+            width: 72% !important;
+        }
+
+        .profileDesc {
+            font-size: large;
+        }
+
+        .name {
+            text-align: center;
+
+            span {
+                font-size: 32px;
+            }
+        }
+    }

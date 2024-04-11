@@ -11,8 +11,8 @@
             </div>
         </div>
     </nav>
-    <div class="flex column">
-        <div class="relative space-between flex">
+    <div class="flex column gap-1em">
+        <div class="profile-container relative flex">
             <div class="profile flex gap-2em">
                 <div class="flex column a-center gap-05em">
                     <img class="profileImg" src="../../../assets/images/male-profile.png" alt="">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="content full-height flex column gap-05em">
-                    <h2 class="margin-0 name">Hello, I'm <span>Thapelo Mokotelakoena</span></h2>
+                    <h2 class="margin-0 name">Hello, I'm <span><span class="show-firstname">Thapelo</span> Mokotelakoena</span></h2>
                     <img class="mean-stack" src="../../../assets/images/mean-stack.png" alt="">
                     <p class="profileDesc margin-0">I am a Javascript evangelist who loves to build web solutions in
                         Angular, Node.js and Express.js<br><br> A great team player who fits well in agile
@@ -47,15 +47,15 @@
             </div>
         </div>
         <div class="box-container flex a-center">
-            <div class="flex full-width space-around m-t-35px">
+            <div class="flex full-width sub-box-container space-around">
                 <div class="flex full-height">
                     <h2 class="margin-0 contactP pointer">Let's discuss <br> on something <span class="span">cool</span>
                         together</h2>
                 </div>
-                <form class="flex gap-1em">
+                <form class="flex main-form gap-1em">
                     <div class="flex">
                         <div class="flex column subj-container gap-1em">
-                            <p class="margin-0 p">Im interested in ...</p>
+                            <p id="auto-type" class="margin-0 p"></p>
                             <div class="flex column gap-05em">
                                 <div class="inner-subj-container flex gap-05em wrap">
                                     <p (click)="selectingSubj(i,subj)"
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="input-container flex column">
-                            <input type="text" formControlName="subject" name="" placeholder="Subject">
+                            <input type="text" [value]="selectedSubject" formControlName="subject" name="" placeholder="Subject">
                             <div class="error-msg"
                                 *ngIf="projectFormGroup.get('subject')?.hasError('required') && projectFormGroup.get('subject')?.touched">
                                 <small>Subject is <strong>required</strong></small>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="input-container flex column">
                             <textarea name="" formControlName="message" placeholder="Your message" id="" cols="30"
-                                rows="5"></textarea>
+                                rows="4"></textarea>
                             <div class="error-msg"
                                 *ngIf="projectFormGroup.get('message')?.hasError('required') && projectFormGroup.get('message')?.touched">
                                 <small>Message is <strong>required</strong></small>
@@ -100,7 +100,8 @@
                         <div (click)="submit()" class="flex center-center">
                             <div class="btn pointer flex center-center">
                                 <mat-icon>send</mat-icon>
-                                <p class="margin-0">Send Message</p>
+                                
+                                <a href="mailto:thapeloghothini@gmail.com" class="margin-0">Send Message</a>
                             </div>
                         </div>
                     </form>
@@ -115,9 +116,9 @@
                     <p class="margin-0">Technical Skills</p>
                 </div>
             </div>
-            <div class="flex center-center">
+            <div class="flex skills-3d center-center">
                 <div class="flex center-center feature-container">
-                    <app-box [tryFeature]="_tryFeature"></app-box>
+                    <app-box class="pointer" [tryFeature]="_tryFeature"></app-box>
                     <mat-slide-toggle (click)="tryFeature()" class="feature">Try Feature!</mat-slide-toggle>
                 </div>
                 <section class="timeline-area flex column gap-1em">
@@ -179,7 +180,7 @@
                     </mat-tab>
                     <mat-tab label="Web">
                         <div class="all-container flex gap-05em">
-                            <div [class.portfolio]="project.name === 'My Portfolio'"
+                            <div [class.portfolio-img]="project.name === 'My Portfolio'"
                                 *ngFor="let project of projects; let i = index" id="project" (click)="showProject(i)"
                                 class="project pointer">
                                 <div class="title absolute">
