@@ -22,14 +22,14 @@ export class LandingComponent implements AfterViewInit {
     technologies: ['AngularJs', 'Node.js', 'MongoDB'],
     color: false,
     git: 'https://github.com/ghothini/mokotelakoena-portfolio',
-    deployment: 'https://firebase.google.com/'
+    deployment: 'https://portfolio-d1b4c.web.app/'
   }, {
     name: "Neutrinos Operations",
     title: "Neutrinos Operations",
     about: "Web application for managing Visa Applications, Visa Extensions, Leave Applications, Guesthouse Services, International Travels and Domestic Travels for Neutrinos RSA.",
     technologies: ['AngularJs', 'Node.js', 'MongoDB'],
     color: true,
-    git: 'https://github.com/ghothini',
+    git: 'https://github.com/ghothini/neutrinos-operations-management-demo',
     deployment: 'https://firebase.google.com/'
   }]
   _value: string = '';
@@ -80,6 +80,5 @@ export class LandingComponent implements AfterViewInit {
 
   submit(): void {
     if (this.projectFormGroup.invalid) return
-    console.log("this.projectFormGroup.value", this.projectFormGroup.value);
   }
 }

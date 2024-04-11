@@ -504,45 +504,51 @@ a {
     }
 
 
-        .contactP {
-            text-align: center;
-        }
+    .contactP {
+        text-align: center;
+    }
 
-        .main-form {
-            flex-direction: column;
-            gap: 1.5em;
-        }
+    .main-form {
+        flex-direction: column;
+        gap: 1.5em;
+    }
 
-        .subj-container {
-            margin-top: 0em !important;
-        }
+    .subj-container {
+        margin-top: 0em !important;
+    }
 
-        .show-firstname {
-            display: none;
-        }
+    .show-firstname {
+        display: none;
+    }
 
-        .timeline-area {
-            width: 281px
-        }
+    .timeline-area {
+        width: 281px
+    }
 
-        .all-container {
-            flex-direction: column;
-            align-items: center;
-        }
+    .all-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .inner-projects {
-            width: 72% !important;
-        }
+    .inner-projects {
+        width: 72% !important;
+    }
 
-        .profileDesc {
-            font-size: large;
-        }
+    .profileDesc {
+        font-size: large;
+    }
 
-        .name {
-            text-align: center;
+    .name {
+        text-align: center;
 
-            span {
-                font-size: 32px;
-            }
+        span {
+            font-size: 32px;
         }
     }
+
+    form {
+        .btn {
+            width: 62% !important;
+        }
+    }
+}
