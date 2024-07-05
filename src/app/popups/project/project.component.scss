@@ -40,6 +40,34 @@ $primary-bg: #939393c9;
         }
     }
 
+    // Live circel
+    .glow-circle {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #3b3a36;
+        /* Color of the glowing circle */
+        animation: pulse 2s ease-in-out infinite;
+        /* Animation effect */
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            box-shadow: 0 0 0 0 rgba(147, 140, 111, 0.7);
+        }
+
+        50% {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 10px rgba(255, 204, 0, 0);
+        }
+
+        100% {
+            transform: scale(0.8);
+            box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+        }
+    }
+
     .desc {
         gap: .7em;
         padding: 5px 5px 5px 13px;
@@ -114,5 +142,22 @@ $primary-bg: #939393c9;
     height: 270px;
     background-image: url("../../../assets/images/dahboard.png") !important;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.triple-t-img {
+    background-image: url("../../../assets/images/Triple-t-logo.jpg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.lmf-img {
+    background-image: url("../../../assets/images/lmf-bg-img.jfif") !important;
+    background-size: cover !important;
+}
+
+.habit-breaker-img {
+    background-image: url("../../../assets/images/habit-breaker-bg-img.jpg") !important;
+    background-size: cover !important;
     background-repeat: no-repeat;
 }

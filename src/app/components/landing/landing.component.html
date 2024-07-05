@@ -11,11 +11,11 @@
             </div>
         </div>
     </nav>
-    <div class="flex column gap-1em">
+    <div class="flex column gap-1em z-index">
         <div class="profile-container relative flex">
             <div class="profile flex gap-2em">
                 <div class="flex column a-center gap-05em">
-                    <img class="profileImg" src="../../../assets/images/male-profile.png" alt="">
+                    <img class="profileImg" src="../../../assets/images/ghothini-img.jpg" alt="">
                     <div class="follow-Icons flex a-center">
                         <div class="container flex center-center">
                             <img (click)="goTo('https://www.linkedin.com/in/thapelo-mokotelakoena-67379b273/?originalSubdomain=za')"
@@ -112,14 +112,14 @@
     <div id="skills" class="skills-container relative flex j-center">
         <div class="inner-skills flex column gap-3em">
             <div class="flex j-center">
-                <div class="heading">
+                <div class="heading z-index">
                     <p class="margin-0">Technical Skills</p>
                 </div>
             </div>
             <div class="flex skills-3d center-center">
                 <div class="flex center-center feature-container">
                     <app-box class="pointer" [tryFeature]="_tryFeature"></app-box>
-                    <mat-slide-toggle (click)="tryFeature()" class="feature">Try Feature!</mat-slide-toggle>
+                    <mat-slide-toggle (click)="tryFeature()" class="feature z-index">Try Feature!</mat-slide-toggle>
                 </div>
                 <section class="timeline-area flex column gap-1em">
                     <div class="timeline flex column gap-05em">
@@ -164,8 +164,8 @@
             <div>
                 <mat-tab-group>
                     <mat-tab label="All">
-                        <div class="all-container flex gap-05em">
-                            <div [class.portfolio-img]="project.name === 'My Portfolio'"
+                        <div class="all-container flex gap-05em wrap">
+                            <div [ngClass]="{'habit-breaker-img': project.name === 'Habit Breaker Web','triple-t-img': project.name === 'Triple T Gym','lmf-img': project.name === 'Likes Meter Flicks','portfolio-img': project.name === 'My Portfolio'}"
                                 *ngFor="let project of projects; let i = index" id="project" (click)="showProject(i)"
                                 class="project pointer">
                                 <div class="title absolute">
@@ -175,12 +175,16 @@
                                 <img src="../../../assets/images/ng.png" alt="" class="framework absolute">
                                 <img src="../../../assets/images/nodejs.png" alt="" class="nodejs absolute">
                                 <img src="../../../assets/images/mongodb.png" alt="" class="mongodb absolute">
+                                <div *ngIf="project.live" class="live-container flex a-center gap-05em">
+                                    <div class="glow-circle"></div>
+                                    <small>Live</small>
+                                </div>
                             </div>
                         </div>
                     </mat-tab>
                     <mat-tab label="Web">
-                        <div class="all-container flex gap-05em">
-                            <div [class.portfolio-img]="project.name === 'My Portfolio'"
+                        <div class="all-container flex gap-05em wrap">
+                            <div [ngClass]="{'habit-breaker-img': project.name === 'Habit Breaker Web','triple-t-img': project.name === 'Triple T Gym','lmf-img': project.name === 'Likes Meter Flicks','portfolio-img': project.name === 'My Portfolio'}"
                                 *ngFor="let project of projects; let i = index" id="project" (click)="showProject(i)"
                                 class="project pointer">
                                 <div class="title absolute">

@@ -16,11 +16,39 @@ export class LandingComponent implements AfterViewInit {
   selectedSubj: any = 0;
   interestedSubject: string[] = ['Landing Page', 'Portfolio', 'Ecommerce Website', 'Blog Website'];
   projects: any[] = [{
+    name: "Triple T Gym",
+    title: "Triple T Gym",
+    about: "Gym management system for managing members payments, profiles, downloading records and filtering trends.",
+    technologies: ['AngularJs', 'Node.js', 'MongoDB'],
+    color: true,
+    live: true,
+    git: 'https://github.com/ghothini/triple-t-gym',
+    deployment: 'https://tripletgym-4775e.web.app/'
+  }, {
+    name: "Likes Meter Flicks",
+    title: "Likes Meter Flicks",
+    about: "Much like IMDb but with its own distinct flair. Lmf is a platform that holds a sea of rated Google users movies and TV shows liked by passionate fans just like you! Whether you're seeking the next binge-worthy series or a hidden gem waiting to be uncovered, Lmf has you covered!",
+    technologies: ['AngularJs', 'Node.js', 'MongoDB'],
+    color: true,
+    live: true,
+    git: 'https://github.com/ghothini/likes-meter-flicks',
+    deployment: 'https://likes-meter-flicks.web.app/'
+  }, {
+    name: "Habit Breaker Web",
+    title: "Habit Breaker Web",
+    about: "Habit Breaker Web, your personal guide to breaking free from habits that hold you back. Say goodbye to those old routines that no longer serve you, and hello to a more empowered you!",
+    technologies: ['AngularJs', 'Node.js', 'MongoDB'],
+    color: false,
+    live: true,
+    git: 'https://github.com/ghothini',
+    deployment: 'https://firebase.google.com/'
+  }, {
     name: "My Portfolio",
     title: "My Portfolio",
     about: "This portfolio is important for me as a developer to showcase projects and technical skills which demostrates what I can do.",
     technologies: ['AngularJs', 'Node.js', 'MongoDB'],
-    color: false,
+    color: true,
+    live: true,
     git: 'https://github.com/ghothini/mokotelakoena-portfolio',
     deployment: 'https://portfolio-d1b4c.web.app/'
   }, {
@@ -28,7 +56,8 @@ export class LandingComponent implements AfterViewInit {
     title: "Neutrinos Operations",
     about: "Web application for managing Visa Applications, Visa Extensions, Leave Applications, Guesthouse Services, International Travels and Domestic Travels for Neutrinos RSA.",
     technologies: ['AngularJs', 'Node.js', 'MongoDB'],
-    color: true,
+    color: false,
+    live: false,
     git: 'https://github.com/ghothini/neutrinos-operations-management-demo',
     deployment: 'https://firebase.google.com/'
   }]

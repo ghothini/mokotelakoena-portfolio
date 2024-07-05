@@ -44,6 +44,34 @@ $primary-bg: #323332;
         margin-top: -2em;
     }
 
+    // Live circel
+    .glow-circle {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #3b3a36;
+        /* Color of the glowing circle */
+        animation: pulse 2s ease-in-out infinite;
+        /* Animation effect */
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            box-shadow: 0 0 0 0 rgba(147, 140, 111, 0.7);
+        }
+
+        50% {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 10px rgba(255, 204, 0, 0);
+        }
+
+        100% {
+            transform: scale(0.8);
+            box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+        }
+    }
+
     .gap-3em {
         gap: 3em;
     }
@@ -168,7 +196,7 @@ $primary-bg: #323332;
 
                 .feature {
                     position: absolute;
-                    top: -19px;
+                    top: -1px;
                     left: calc(50% - 67px);
                 }
             }
@@ -225,6 +253,12 @@ $primary-bg: #323332;
                         bottom: 10px;
                         left: 9px;
                     }
+
+                    .live-container {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                    }
                 }
 
                 .soon {
@@ -248,6 +282,21 @@ a {
 
 .portfolio-img {
     background-image: url("../../../assets/images/dahboard.png") !important;
+    background-size: cover !important;
+}
+
+.triple-t-img {
+    background-image: url("../../../assets/images/Triple-t-logo.jpg") !important;
+    background-size: cover !important;
+}
+
+.lmf-img {
+    background-image: url("../../../assets/images/lmf-bg-img.jfif") !important;
+    background-size: cover !important;
+}
+
+.habit-breaker-img {
+    background-image: url("../../../assets/images/habit-breaker-bg-img.jpg") !important;
     background-size: cover !important;
 }
 
@@ -368,8 +417,9 @@ a {
     }
 
     .profileImg {
-        height: 183px;
-        border: 2px solid black;
+        height: 180px;
+        width: 176px;
+        border: 2px solid #50553d;
         border-radius: 50%;
         padding: 2px;
     }
@@ -486,6 +536,12 @@ a {
     }
 }
 
+@media screen and (max-width: 1031px) {
+    .feature-container {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 803px) {
     .gap-16em {
         gap: 1em !important;
@@ -551,4 +607,31 @@ a {
             width: 62% !important;
         }
     }
+}
+
+@media screen and (max-width: 615px) {
+
+    .sphere {
+        margin-left: 0em !important;
+        max-height: 281px;
+        overflow: hidden;
+    }
+
+    .profile-container {
+        margin-top: -1em;
+    }
+
+    // .skills-3d {
+    //     margin-top: -8em;
+    // }
+
+    .feature-container {
+        display: flex !important;
+        max-height: 415px;
+        overflow: hidden;
+    }
+
+    // .feature {
+    //     top: 132px !important;
+    // }
 }

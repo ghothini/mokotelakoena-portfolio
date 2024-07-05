@@ -1,0 +1,17 @@
+.mobile-canvas {
+    height: 529px !important;
+    width: 313px !important;
+}
+
+@media screen and (max-width: 1031px) {
+    canvas {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 615px) {
+    canvas {
+        display: flex !important;
+    }
+}

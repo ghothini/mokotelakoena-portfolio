@@ -1,6 +1,6 @@
 <div class="all-container border-box flex column gap-05em">
-    <div [class.neutinos]="project.name === 'Neutrinos Operations'"
-    [class.portfolio]="project.name === 'My Portfolio'" class="project pointer relative">
+    <div [ngClass]="{'habit-breaker-img': project.name === 'Habit Breaker Web','triple-t-img': project.name === 'Triple T Gym','lmf-img': project.name === 'Likes Meter Flicks','portfolio': project.name === 'My Portfolio','neutinos': project.name === 'Neutrinos Operations'}"
+        class="project pointer relative">
         <div class="title absolute">
         </div>
         <img src="../../../assets/images/ng.png" alt="" class="framework absolute">
@@ -8,7 +8,13 @@
         <img src="../../../assets/images/mongodb.png" alt="" class="mongodb absolute">
     </div>
     <div class="desc flex column">
-        <p class="margin-0 descP">{{project.title | titlecase}}</p>
+        <div class="flex a-center gap-05em">
+            <p class="margin-0 descP">{{project.title | titlecase}}</p>
+            <div *ngIf="project.live" class="live-container flex a-center gap-05em">
+                <div class="glow-circle"></div>
+                <small>Live</small>
+            </div>
+        </div>
         <small>{{project.about}}</small>
         <div class="flex column gap-05em">
             <p class="stack-desc margin-0 descP">Technology Stack</p>
